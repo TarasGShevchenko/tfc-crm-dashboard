@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# Design decisions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### The main idea of this application is to demonstrate how to work with a customer management dashboard using React, TypeScript, React Query, and Material UI.
+#### The application supports list view with filtering, user details page, and infinite scroll for data loading.
+#### Filters were implemented to allow users to narrow down the list of customers by gender, country, city, state, or by free-text search.
+#### The customer details page also displays order history, providing additional depth and practical use case simulation.
+#### The UI is built with Material UI, which ensures responsiveness, consistency, and fast prototyping.
 
-## Available Scripts
+# Home page
 
-In the project directory, you can run:
+### Open [https://tarasgshevchenko.github.io/tfc-crm-dashboard](https://tarasgshevchenko.github.io/tfc-crm-dashboard) to view it in the browser.
 
+#### The Users page displays a list of customers in a table format.
+#### Filters (gender, country, city, state, search) are available at the top. The data is filtered in real-time.
+#### Users are loaded with infinite scroll. When reaching the bottom of the list, new users are automatically fetched and displayed.
+#### Clicking on a user opens the User details page.
+
+# User details page
+
+#### The user details page shows all available information about the customer, including name, email, phone, address, and other relevant data.
+#### A navigation option allows returning back to the list view.
+#### Additionally, the page displays the order history of the selected user in a structured list
+
+# Getting Started
+
+## Clone project
+#### Clone the project to your local machine
+### `git clone git@github.com:TarasGShevchenko/tfc-crm-dashboard.git`
+
+#### Go to the directory where you cloned the project
+### `cd tfc-crm-dashboard`
+
+## Setup project
+
+#### Install all required dependencies by running the following commandInstall all required dependencies by running the following command
+### `npm install`
+
+## Run project
+
+#### Run the application with the command below
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Build project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
+#### Build the application with the command below
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
