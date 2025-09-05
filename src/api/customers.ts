@@ -7,7 +7,7 @@ export const fetchFilters = async (): Promise<{
   cities: string[]
   states: string[]
 }> => {
-  const response = await fetch('/data/customers.json')
+  const response = await fetch('./data/customers.json')
   if (!response.ok) throw new Error('Something went wrong')
 
   const data = (await response.json()) as User[]
@@ -21,7 +21,7 @@ export const fetchFilters = async (): Promise<{
 }
 
 export const fetchUsers = async (pageParam = 0, filters: UsersFilters = {}): Promise<User[]> => {
-  const response = await fetch('/data/customers.json')
+  const response = await fetch('./data/customers.json')
   if (!response.ok) throw new Error('Something went wrong')
 
   const data = (await response.json()) as User[]
@@ -51,7 +51,7 @@ export const fetchUsers = async (pageParam = 0, filters: UsersFilters = {}): Pro
 export const fetchUserByEmail = async (email: string | undefined): Promise<User> => {
   if (!email) throw new Error('Invalid email')
 
-  const response = await fetch('/data/customers.json')
+  const response = await fetch('./data/customers.json')
   if (!response.ok) throw new Error('Something went wrong')
 
   const data = (await response.json()) as User[]

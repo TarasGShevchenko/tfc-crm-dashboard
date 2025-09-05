@@ -2,7 +2,7 @@ import { ORDERS_LIMIT } from '../constants'
 import { Order } from '../types'
 
 export const fetchOrders = async (page: number): Promise<{ orders: Order[]; total: number }> => {
-  const response = await fetch('/data/orders.json')
+  const response = await fetch('./data/orders.json')
   if (!response.ok) throw new Error('Something went wrong')
 
   const data = (await response.json()) as Order[]
