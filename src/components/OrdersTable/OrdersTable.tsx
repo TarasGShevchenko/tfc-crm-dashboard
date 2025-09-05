@@ -6,6 +6,7 @@ import {
   Table,
   TableBody,
   TableCell,
+  TableContainer,
   TableHead,
   TablePagination,
   TableRow,
@@ -41,40 +42,42 @@ export const OrdersTable: FC = () => {
       <Typography variant="h6" gutterBottom>
         Order History
       </Typography>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>ID</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Price</TableCell>
-            <TableCell>Amount</TableCell>
-            <TableCell align="right">Shipped Date</TableCell>
-            <TableCell align="right">Created Date</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data &&
-            data.orders.map(order => (
-              <TableRow key={order.number}>
-                <TableCell>{order.number}</TableCell>
-                <TableCell>{order.itemName}</TableCell>
-                <TableCell>
-                  {order['price '].toLocaleString('en-US', {
-                    style: 'currency',
-                    currency: order.currency,
-                  })}
-                </TableCell>
-                <TableCell>{order.amount}</TableCell>
-                <TableCell align="right">
-                  {new Date(order.shippedAt).toLocaleDateString()}
-                </TableCell>
-                <TableCell align="right">
-                  {new Date(order.createdAt).toLocaleDateString()}
-                </TableCell>
-              </TableRow>
-            ))}
-        </TableBody>
-      </Table>
+      <TableContainer sx={{ maxWidth: '100%', overflowX: 'auto' }}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>ID</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Price</TableCell>
+              <TableCell>Amount</TableCell>
+              <TableCell align="right">Shipped Date</TableCell>
+              <TableCell align="right">Created Date</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data &&
+              data.orders.map(order => (
+                <TableRow key={order.number}>
+                  <TableCell>{order.number}</TableCell>
+                  <TableCell>{order.itemName}</TableCell>
+                  <TableCell>
+                    {order['price '].toLocaleString('en-US', {
+                      style: 'currency',
+                      currency: order.currency,
+                    })}
+                  </TableCell>
+                  <TableCell>{order.amount}</TableCell>
+                  <TableCell align="right">
+                    {new Date(order.shippedAt).toLocaleDateString()}
+                  </TableCell>
+                  <TableCell align="right">
+                    {new Date(order.createdAt).toLocaleDateString()}
+                  </TableCell>
+                </TableRow>
+              ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
       <TablePagination
         component="div"
         count={data?.total ?? 0}
