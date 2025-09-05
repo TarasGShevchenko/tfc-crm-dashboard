@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/tfc-crm-dashboard/static/js/main.c00c7d7e.js",
+    "main.js": "/tfc-crm-dashboard/static/js/main.f491b2a4.js",
     "static/js/453.61be9fd3.chunk.js": "/tfc-crm-dashboard/static/js/453.61be9fd3.chunk.js",
     "index.html": "/tfc-crm-dashboard/index.html",
-    "main.c00c7d7e.js.map": "/tfc-crm-dashboard/static/js/main.c00c7d7e.js.map",
+    "main.f491b2a4.js.map": "/tfc-crm-dashboard/static/js/main.f491b2a4.js.map",
     "453.61be9fd3.chunk.js.map": "/tfc-crm-dashboard/static/js/453.61be9fd3.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.c00c7d7e.js"
+    "static/js/main.f491b2a4.js"
   ]
 }
